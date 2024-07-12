@@ -1,0 +1,843 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #111;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+h1, h2, h4 {
+    color: #222;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+
+body {
+  width: 100%;
+  padding: 0 auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/*------- NAVIGATION Styles Start------------------------------------------------------------------- */
+nav{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #F5F5F5;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.09);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;                                  /*RELATIVE helps us to make the child elements BASOLUTE*/
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    transition: 0.3s ease;
+}
+
+#navbar li a i{
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active,
+#navbar i:hover,
+#navbar i.active{
+    color: #54A958;
+}
+
+
+#navbar li a.active::after,
+#navbar li a:hover::after,
+#navbar i.active::after,
+#navbar i:hover::after {
+    content: "";                                    /* create the underline below the Nav Links upon clicking*/
+    width: 33%;
+    height: 2px;
+    background: #54A958;
+    position: absolute;                          /* to use ABSOLUTE in this Child element (<a>), I MUST use RELATIVE inside the parent (<li>)*/
+    bottom: -4px;
+    left: 20px;
+}
+
+#moblie {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+#moblie #bar {
+    cursor: pointer;
+}
+
+/*--HOME PAGE Styles START --------------------------------------------------- */
+/*=============================HERO SECTION===============================*/
+
+#hero {
+    /**background-image: url("img/image.png");**/
+    height: 100vh;
+    width: 90%;
+    max-width: 1200px;
+    padding: auto 45px;
+    margin: 12rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    /**border: 1px solid blue;**/
+}
+
+#hero #hero-content{
+    display: flex;
+    width: 100%;
+}
+
+#hero #hero-left {
+    width: 50%;
+    padding-right: 3rem;
+}
+
+#hero #hero-right {
+    width: 50%;
+    background-color: #810811;
+}
+
+#hero h4 {
+    padding-bottom: 15px;
+    color: #222;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: 200;
+    font-family: "Montserrat", sans-serif;
+}
+
+#hero h1 {
+    color: #222;
+    margin-bottom: 0rem;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+    letter-spacing: 3px;
+    line-height: 5rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 5rem;
+}
+
+#hero span {
+    color: #54A958;
+}
+
+#hero strong {
+    color: rgb(150, 118, 44);
+}
+
+#hero p {
+    color: #222;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 0rem;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+    font-family: "Poppins", sans-serif;
+}
+
+#hero #call-to-action {
+    color: #222;
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+    font-family: "Poppins", sans-serif;
+}
+
+#hero #cta-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#hero #cta-btn button {
+    color: #222;
+    background: gold;
+    border-right: 8px solid #222;
+    border-bottom: 8px solid #222;
+    border-left: 8px solid gold;
+    border-top: 8px solid gold;
+    padding: 15px 45px;
+    margin-left: 2px;
+    margin-bottom: 1.5rem;
+    font-size: 1.35rem;
+    font-weight: 800;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.6s ease;
+}
+
+#hero #cta-btn button:hover {
+    border: 8px solid gold;
+
+}
+
+#hero #cta-btn p {
+    color: #54A958;
+    font-weight: 900;
+    font-size: 1rem;
+    padding: 4rem auto;
+    text-align: center;
+    line-height: 1.5rem;
+    font-family: "Poppins", sans-serif;
+}
+
+#hero #cta-btn span {
+    color: #222;
+    text-decoration: line-through;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+}
+
+/*=============================ABOUT SECTION===============================*/
+
+#about-section-header.about-header {
+    background-image: url(img/banner.png);
+    margin: 0 auto;
+    padding: 1rem auto;
+}
+
+#about-section-header.about-header div{
+    margin: 0 auto;
+    padding: 1rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-section-header.about-header p,
+#about-section-header.about-header h2,
+#about-section-header.about-header h3 {
+    color: #fff;
+}
+
+#about-section-header.about-header p {
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+
+#about-section-header.about-header h2 {
+    letter-spacing: 3px;
+}
+
+#about-section-header.about-header span {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-weight: 900;
+    color: #fff;
+}
+
+#about-section-header.about-header h3{
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 1rem;
+}
+
+/*=============================FLAGSHIPS SECTION===============================*/
+
+#flagships {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#flagships h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 1rem;
+}
+
+#flagships #flagship-projects {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 0;
+}
+
+#flagships article {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4rem;
+    padding: 2rem 80px;
+}
+
+#flagships article #article-img {
+    width: 42%;
+    height: 280px;
+    background-color: #810811;
+}
+
+#flagships article #article-description {
+    width: 42%;
+}
+
+#flagships article button,
+#more-project-btn {
+    color: #222;
+    background: gold;
+    border-right: 8px solid #222;
+    border-bottom: 8px solid #222;
+    border-left: 8px solid gold;
+    border-top: 8px solid gold;
+    padding: 15px 45px;
+    margin-left: 2px;
+    margin-bottom: 1.5rem;
+    font-size: 1.35rem;
+    font-weight: 800;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.6s ease;
+}
+
+#flagships article button:hover,
+#more-project-btn:hover {
+    border: 8px solid gold;
+
+}
+
+/*=============================SERVICES SECTION===============================*/
+
+#services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#services h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 0;
+}
+
+#services p {
+    padding: 0 6rem;
+}
+
+#services #services-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#services #services-value-prop {
+    padding-top: 0;
+    padding-bottom: 3rem;
+}
+
+#services article {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    column-gap: 2rem;
+    padding: 0;
+}
+
+#services article #service-article-description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+    padding: 0.5rem 40px;
+}
+
+#services article #service-article-description ul {
+    list-style: none;
+    color: #222;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+}
+
+#services article #service-article-description li {
+    padding: 1rem auto;
+    text-align: center;
+    font-weight: lighter;
+}
+
+
+#services article #service-article-img {
+    width: 90px;
+    height: 90px;
+    border: 1px solid black;
+    background-color: #810811;
+}
+
+#services article #service-article-description span {
+    color: #54A958;
+    margin-top: 1.2rem;
+}
+
+#services article a {
+    color: blue;
+    border: 8px solid transparent;
+    text-decoration: none;
+    padding: 12px 21px;
+    margin-left: 2px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 200;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.6s ease;
+}
+
+#services article a:hover {
+    border: 8px solid gold;
+
+}
+
+/*=============================PROJECTS SECTION===============================*/
+
+#projects-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+#projects-banner h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1px;
+    color: #222;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    letter-spacing: 3px;
+    line-height: 5.7rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 5rem;
+}
+
+
+#projects-banner article {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4rem;
+    padding: 0 150px;
+    padding-bottom: 10rem;
+}
+
+#projects-banner #projects-banner-article-description {
+    width: 42vw;
+    height: 390px;
+}
+
+#projects-banner #projects-banner-article-description h2 {
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+}
+
+#projects-banner #projects-banner-article-description p {
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+#projects-banner #projects-banner-article-description #stats-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#projects-banner #projects-banner-article-description #stats-container div {
+    width: 50%;
+    padding-right: 1rem;
+}
+
+#projects-banner #projects-banner-article-description #stats-container .house-stats {
+    padding-left: 1rem;
+    border-left: 1px solid black;
+}
+
+#projects-banner #projects-banner-article-description #stats-container #stats {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #54A958;
+    padding: 0;
+    padding-top: 0.8rem;
+    padding-bottom: 9px;
+    margin: 0;
+    line-height: 2rem;
+}
+
+#projects-banner #projects-banner-article-description #stats-container #stats-categoty {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #54A958;
+    padding: 0;
+    padding-bottom: 0.8rem;
+    margin: 0;
+}
+
+#projects-banner #projects-banner-article-img {
+    width: 42vw;
+    background-color: #810811;
+    height: 420px;
+}
+
+/**
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    margin-top: 5rem;
+    border: 1px solid black;
+}
+
+#projects h2 {
+    border: 1px solid blue;
+    padding: 0;
+}
+
+#projects #projects-articles-container {
+    display: flex;
+    column-gap: 4rem;
+    padding-top: 4rem;
+    border: 1px solid red;
+}
+
+*/
+
+/*=============================CALL TO ACTION SECTION===============================*/
+
+#cta-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9rem 0;
+}
+
+#cta-section h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+}
+
+#cta-section article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 3rem;
+    padding: auto;
+    padding-left: 9.3rem;
+    padding-top: 3rem;
+}
+
+#cta-section article #contact-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cta-section article #contact-caption i {
+    font-size: 2.4rem;
+    padding-bottom: 0.3rem;
+    color: #54A958;
+}
+
+#cta-section article p {
+    margin-top: 6px;
+    padding-left: 9px;
+}
+
+
+
+/*========================Start MEDIA QUERY------------------------------------------------------------------------------------------------------*/
+
+
+@media (max-width: 799px) {
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #E3FFF3;
+        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 36px;
+    }
+
+    #moblie {
+        display: flex;
+        align-items: center;
+    }
+
+    #moblie i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close {
+        display: initial;                         /*--Initial--sets the close element to default html display of In-line*/
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #hero {
+        height: 100vh;
+        width: 81%;
+        max-width: 1200px;
+        padding: auto 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        font-family: "Poppins", sans-serif;
+    }
+}
+
+
+#projects-banner h1 {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 4rem;
+}
+
+#projects-banner article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10rem;
+    padding: 0 150px;
+    padding-bottom: 10rem;
+}
+
+
+@media (max-width: 477px) {
+    * {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    body {
+        border: 2px solid blue;
+        padding-top: 9rem;
+        margin-left: 0rem;
+    }
+
+    #hero {
+        width: 100%;
+        margin: 240px 0;
+    }
+
+    #hero #hero-content {
+        flex-direction: column;
+    }
+
+    #hero #hero-left {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 3rem;
+    }
+
+    #hero #hero-right {
+        width: 100%;
+    }
+
+    #hero img {
+        width: 100%;
+        height: 300px;
+        margin-left: 0;
+    }
+
+    #about-section-header.about-header div {
+        margin: 0;
+        padding: 0;
+        padding-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #services p {
+        padding: 0;
+    }
+
+    #services #services-content {
+        display: flex;
+        flex-direction: column;justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #services-content article {
+        padding: 0;
+        width: 100%;
+    }
+
+    #services-content article div#service-article-img {
+        padding: 0;
+        width: 100%;
+        height: 300px;
+    }
+
+    #services-content article div#service-article-description {
+        padding: 0;
+        width: 100%;
+        height: 300px;
+    }
+
+    #projects-banner article {
+        row-gap: 2rem;
+        padding: 0;
+        padding-bottom: 0rem;
+        width: 100%;
+    }
+
+    #projects-banner article #projects-banner-article-description {
+        height: fit-content;
+        width: 100%;
+    }
+
+    #projects-banner article #projects-banner-article-img {
+        height: 300px;
+        width: 100%;
+    }
+
+    #flagships article {
+        flex-direction: column;
+        padding: 0;
+        padding-bottom: 2rem;
+        padding-top: 3rem;
+        row-gap: 2rem;
+        width: 100%;
+    }
+
+    #flagships article #article-img {
+        width: 100%;
+    }
+
+    #flagships article #article-description {
+        width: 100%;
+    }
+
+    #flagships #flagship-projects {
+        padding-bottom: 0;
+        padding-top: 0rem;
+    }
+
+    #cta-section article {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+}
+

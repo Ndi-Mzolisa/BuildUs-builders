@@ -727,7 +727,6 @@ nav{
     }
 
     body {
-        border: 2px solid blue;
         padding-top: 9rem;
         margin-left: 0rem;
     }
@@ -748,23 +747,47 @@ nav{
     }
 
     #hero #hero-right {
-        width: 100%;
+        width: 81%;
+    }
+
+    #hero h1 {
+        line-height: 4.4rem;
+        font-size: 4.4rem;
+    }
+
+    #hero h4 {
+        font-size: 2.4rem;
+        padding: 0 2rem;
+    }
+
+    #hero p {
+        padding: 0 2rem;
     }
 
     #hero img {
         width: 100%;
         height: 300px;
-        margin-left: 0;
+    }
+
+    #hero #cta-btn button {
+        width: 81%;
     }
 
     #about-section-header.about-header div {
         margin: 0;
         padding: 0;
         padding-top: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    #services {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     #services p {
@@ -795,16 +818,30 @@ nav{
         height: 300px;
     }
 
+    #projects-banner h1 {
+        text-align: center;
+        font-size: 3.3rem;
+        line-height: 3.3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
     #projects-banner article {
         row-gap: 2rem;
         padding: 0;
-        padding-bottom: 0rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
         width: 100%;
     }
 
     #projects-banner article #projects-banner-article-description {
         height: fit-content;
         width: 100%;
+    }
+
+    #projects-banner #projects-banner-article-description h2 {
+        font-size: 2.4rem;
+        line-height: 2.4rem;
     }
 
     #projects-banner article #projects-banner-article-img {
@@ -814,9 +851,7 @@ nav{
 
     #flagships article {
         flex-direction: column;
-        padding: 0;
-        padding-bottom: 2rem;
-        padding-top: 3rem;
+        padding: 3rem 2rem 2rem 2rem;
         row-gap: 2rem;
         width: 100%;
     }
@@ -834,10 +869,30 @@ nav{
         padding-top: 0rem;
     }
 
+    #flagships article button, #more-project-btn {
+        width: 81%;
+    }
+
+    #cta-section {
+        padding: 9rem 2rem;
+    }
+
     #cta-section article {
         display: flex;
         flex-direction: column;
         padding-left: 0;
     }
+
+    #header {
+        padding: 12px 20px;
+        background: #F5F5F5;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.09);
+        z-index: 999;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    
 }
 

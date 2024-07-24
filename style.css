@@ -772,8 +772,6 @@ nav{
 
     #hero #hero-content {
         flex-direction: column;
-        margin-bottom: 12rem;
-        padding-bottom: 30rem;
     }
 
     #hero #hero-left {
@@ -862,6 +860,7 @@ nav{
         line-height: 3.3rem;
         padding-left: 2rem;
         padding-right: 2rem;
+        padding-top: 24rem;
     }
 
     #projects-banner article {

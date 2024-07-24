@@ -48,14 +48,6 @@ p {
   margin: 15px 0 20px 0;
 }
 
-.section-p1 {
-  padding: 40px 80px;
-}
-
-.section-m1 {
-  margin: 40px 0;
-}
-
 
 body {
   width: 100%;
@@ -365,6 +357,7 @@ nav{
     padding: 15px 45px;
     margin-left: 2px;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     font-size: 1.35rem;
     font-weight: 800;
     cursor: pointer;
@@ -636,6 +629,47 @@ nav{
 }
 
 
+/*========================ABOUT Page------------------------------------------------------------------------------------------------------*/
+#about-page {
+    padding: 14rem 100px 0 100px;
+}
+
+#about-page h1 {
+    text-align: center;
+    padding: 0;
+    padding-bottom: 75px;
+}
+
+#about-page article {
+    display: flex;
+    column-gap: 4rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+#about-page article img {
+    background-color: #810811;
+    width: 500px;
+    height: 300px;
+}
+
+#about-page section {
+    text-align: center;
+    padding: 4rem 15rem;
+    padding-bottom: 0;
+}
+
+#about-page section p {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+}
+
+#about-page section div {
+    padding-bottom: 1.5rem;
+}
 
 /*========================Start MEDIA QUERY------------------------------------------------------------------------------------------------------*/
 
@@ -896,3 +930,13 @@ nav{
     
 }
 
+/* about page**/
+
+#about-body {
+    padding-top: 4rem;
+}
+
+.about-page-article {
+    height: fit-content;
+    margin-bottom: 9rem;
+}

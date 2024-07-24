@@ -772,6 +772,7 @@ nav{
 
     #hero #hero-content {
         flex-direction: column;
+        padding-bottom: 15rem;
     }
 
     #hero #hero-left {
@@ -811,7 +812,8 @@ nav{
     #about-section-header.about-header div {
         margin: 0;
         padding: 0;
-        padding-top: 3rem;
+        padding-top: 9rem;
+        /**margin-top: 12rem;*/
         padding-left: 2rem;
         padding-right: 2rem;
         display: flex;

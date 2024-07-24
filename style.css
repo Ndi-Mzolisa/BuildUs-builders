@@ -772,7 +772,8 @@ nav{
 
     #hero #hero-content {
         flex-direction: column;
-        padding-bottom: 8rem;
+        margin-bottom: 12rem;
+        padding-bottom: 30rem;
     }
 
     #hero #hero-left {

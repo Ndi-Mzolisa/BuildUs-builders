@@ -343,8 +343,8 @@ nav{
 
 #flagships article #article-img {
     width: 42%;
-    height: 280px;
-    background-color: #810811;
+    height: auto;
+    background-color: transparent;
 }
 
 #flagships article #article-description {
